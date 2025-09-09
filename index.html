@@ -1,49 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Search Box with Formspree</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-    input[type="text"] {
-      padding: 12px;
-      width: 300px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 380px;
+        }
 
-    input[type="submit"] {
-      padding: 12px 20px;
-      margin-left: 10px;
-      border-radius: 8px;
-      border: none;
-      background-color: #00ff99;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-    }
+        .logo-container {
+            margin-bottom: 30px;
+        }
 
-    input[type="submit"]:hover {
-      background-color: #00cc77;
-    }
-  </style>
+        .logo-container img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .input-group input[type="email"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 25px;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            background-color: #007bff;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-
-  <h1>Search Anything 🔍</h1>
-
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="searchQuery" placeholder="Type your search here..." required>
-    <input type="submit" value="Send">
-  </form>
-
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="https://assets.super.so/47fa140c-5512-4ac6-a02b-6305f7e083a9/uploads/logo/a44fb16b-1553-4cbf-aadc-e1c68c8784b6.png"
+                 alt="Adhiparasakthi Engineering College Logo">
+        </div>
+        <h2>College Login</h2>
+        <form class="login-form">
+            <div class="input-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
 </body>
 </html>
+
